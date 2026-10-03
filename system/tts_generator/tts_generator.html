@@ -1220,7 +1220,7 @@
                 autoplay_volume: volume
             });
 
-            const response = await fetch(baseUrl + "/api/tts-generate", {
+            const response = await fetch(baseUrl + "./api/tts-generate", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
@@ -1356,7 +1356,7 @@
                 autoplay: "false",
                 autoplay_volume: "0.1"
             });
-            const response = await fetch(baseUrl + "/api/tts-generate", {
+            const response = await fetch(baseUrl + "./api/tts-generate", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
@@ -1478,7 +1478,7 @@
                 autoplay: "true",
                 autoplay_volume: volume,
             });
-            const response = await fetch(baseUrl + "/api/tts-generate", {
+            const response = await fetch(baseUrl + "./api/tts-generate", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
@@ -1516,7 +1516,7 @@
             });
 
             // Reinitialize currentSound every time
-            var srcUrl = baseUrl + "/tts-demo-request?" + queryParams.toString();
+            var srcUrl = baseUrl + "./tts-demo-request?" + queryParams.toString();
             currentSound = new Howl({
                 src: [srcUrl],
                 volume: volume,
@@ -1581,7 +1581,7 @@
             formData.append("rvccharacter_voice_gen", RVCVoice);
             formData.append("rvccharacter_pitch", RVCPitch);
 
-            const response = await fetch(baseUrl + "/api/previewvoice/", {
+            const response = await fetch(baseUrl + "./api/previewvoice/", {
                 method: "POST",
                 body: formData,
             });
@@ -2127,7 +2127,7 @@
 
     async function fetchRVCVoices() {
         try {
-            const response = await fetch(baseUrl + "/api/rvcvoices");
+            const response = await fetch(baseUrl + "./api/rvcvoices");
             const result = await response.json();
             const RVCVoiceSelect = document.getElementById("RVC_voice_gen");
 
