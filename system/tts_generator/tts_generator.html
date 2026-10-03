@@ -2102,7 +2102,7 @@
 
     async function fetchVoices() {
         try {
-            const response = await fetch(baseUrl + "/api/voices");
+            const response = await fetch(baseUrl + "./api/voices");
             const result = await response.json();
             const characterVoiceSelect = document.getElementById("character_voice_gen");
 
